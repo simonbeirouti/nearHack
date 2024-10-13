@@ -1,7 +1,28 @@
-# Tauri + React
+# Tauri + NextJS + NEAR + ?
 
-This template should help get you started developing with Tauri and React in Vite.
+Getting up and running to operate cross platform apps with NEAR, NextJS and Tauri
 
-## Recommended IDE Setup
+## Background
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+Initially starting as a email client focusing solely on P2P connection -> https://github.com/simonbeirouti/nearHackBU
+
+I changed the approach based on the MPC capacilities that NEAR contains, therefore easing the ability to onboard new individuals into the web3 ecosystem. 
+
+## Features
+
+- Chain selection
+- Key rotation/limitations
+- Visualised NFTs
+- Visualise storage linked to you
+
+## Steps
+
+1. [] Create NEAR account and have information within Tauri app
+    - [] Auth capabilities
+        - [] Secret phrase
+        - [] Account abstraction
+    - [] Key rotation/limitations
+2. [] Interface with other chains
+    - [] New chain address
+3. [] Meme'ification
+

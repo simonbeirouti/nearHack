@@ -6,9 +6,9 @@ fn greet(name: &str) -> String {
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
-    tauri::Builder::default()
+    new_tauri_lib::Builder::default()
         .plugin(tauri_plugin_shell::init())
-        .invoke_handler(tauri::generate_handler![greet])
-        .run(tauri::generate_context!())
+        .invoke_handler(new_tauri_lib::generate_handler![greet])
+        .run(new_tauri_lib::generate_context!())
         .expect("error while running tauri application");
 }

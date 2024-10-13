@@ -1,7 +1,4 @@
 import "./globals.css";
-import Navigation from "../components/containers/Navigation";
-import FullPageWrapper from "../components/containers/FullPageWrapper";
-import SizeChecker from "../components/SizeChecker";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,13 +9,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="h-screen w-screen py-4 pr-4 bg-[#1a1a1a] overflow-hidden">
+        <div className="h-screen w-screen bg-[#1a1a1a] overflow-none">
           <div className="flex flex-row h-full">
-            <Navigation />
-              <FullPageWrapper>
-                {children}
-              </FullPageWrapper>
-            <SizeChecker />
+            {children}
           </div>
         </div>
       </body>

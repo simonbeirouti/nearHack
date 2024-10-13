@@ -1,5 +1,6 @@
+'use client'
+
 import React, { useState } from 'react';
-import { useBackgroundAnimation } from '../../hooks/use-zoom-rotation';
 
 const OnboardingStep = ({
   title,
@@ -42,7 +43,6 @@ const OnboardingStep = ({
 const OnboardingFlow = ({ onComplete }) => {
   const [step, setStep] = useState(0);
   const [flowType, setFlowType] = useState(null);
-  const { scale, rotation } = useBackgroundAnimation();
 
   const newAccountSteps = [
     {
@@ -101,13 +101,11 @@ const OnboardingFlow = ({ onComplete }) => {
   const currentSteps = flowType === 'newAccount' ? newAccountSteps : loginSteps;
 
   return (
-    <div className="h-screen w-screen overflow-hidden relative">
+    <div className="h-screen w-screen overflow-none relative">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/public/blue.png)',
-          transformOrigin: 'center center',
-          transform: `scale(${scale}) rotate(${rotation}deg)`,
+          backgroundImage: 'url(/lonely-mountain.png)',
         }}
       ></div>
       {!flowType ? (
